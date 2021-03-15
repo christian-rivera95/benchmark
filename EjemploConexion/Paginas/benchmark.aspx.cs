@@ -35,6 +35,21 @@ namespace EjemploConexion.Paginas
             return _random.Next(200000000, 299999999);
         }
 
+        public int RandomTiny()
+        {
+            return _random.Next(0, 127);
+        }
+
+        public int RandomSmall()
+        {
+            return _random.Next(0, 32767);
+        }
+
+        public int RandomMedium()
+        {
+            return _random.Next(0, 16777215);
+        }
+
         // Instantiate random Date generator.  
         private Random gen = new Random();
 
@@ -46,20 +61,42 @@ namespace EjemploConexion.Paginas
             return start.AddDays(gen.Next(range));
         }
 
+        //Generates a random timestamp
+        public static string RandomTimestamp()
+        {
+            string number = String.Format("{0:d9}", (DateTime.Now.Ticks / 10) % 1000000000);
+            return number;
+        }
+
+        static float NextFloat(float min, float max)
+        {
+            System.Random random = new System.Random();
+            double val = (random.NextDouble() * (max - min) + min);
+            return (float)val;
+        }
+
+        public double GetRandomNumber(double minimum, double maximum)
+        {
+            Random random = new Random();
+            return random.NextDouble() * (maximum - minimum) + minimum;
+        }
+
         protected void Button1_Click(object sender, EventArgs e)
         {
-            int count = 0;
-            String textbox1 = TextBox1.Text;
-            bool christian_input = String.Equals(textbox1,"", StringComparison.InvariantCulture);
-            if(!christian_input)
-            {
-                count = Convert.ToInt32(TextBox1.Text);
-            }
+
             Boolean christian = CheckBox1.Checked;
             Boolean maria = CheckBox2.Checked;
             Boolean pedro = CheckBox3.Checked;
             Boolean jorge = CheckBox4.Checked;
             Boolean roberto = CheckBox5.Checked;
+
+            int count = 0;
+            String textbox1 = TextBox1.Text;
+            bool christian_input = String.Equals(textbox1, "", StringComparison.InvariantCulture);
+            if (!christian_input)
+            {
+                count = Convert.ToInt32(TextBox1.Text);
+            }
 
             int n = 0;
             while (n < count && christian)
@@ -68,12 +105,20 @@ namespace EjemploConexion.Paginas
                 //crear un objeto tipo sql alumno
                 sql_Benchmark insercion = new sql_Benchmark();
 
-                    String nombre = RandomString(10);
-                    DateTime edad = RandomDay();
+                int tiny = RandomTiny();
+                int small = RandomSmall();
+                int medium = RandomMedium();
+                float randomFloat = NextFloat((float)0.00000, (float)9999.99999);
+                String randomChar = RandomString(1);
+                String varchar = RandomString(10);
+                String tinyText = RandomString(20);
+                String text = RandomString(30);
+                String mediumText = RandomString(40);
+                DateTime date = RandomDay();
 
-                    //Ejecutar metodo insertar
-                    insercion.insertarChristian(nombre, edad);
-                    n++;
+                //Ejecutar metodo insertar
+                insercion.insertarChristian(tiny, small, medium, randomFloat, randomChar, varchar, tinyText, text, mediumText, date);
+                n++;
 
             }
 
@@ -92,11 +137,19 @@ namespace EjemploConexion.Paginas
                 //crear un objeto tipo sql alumno
                 sql_Benchmark insercion = new sql_Benchmark();
 
-                String nombre = RandomString(10);
-                DateTime edad = RandomDay();
+                int tiny = RandomTiny();
+                int small = RandomSmall();
+                int medium = RandomMedium();
+                float randomFloat = NextFloat((float)0.00000, (float)9999.99999);
+                String randomChar = RandomString(1);
+                String varchar = RandomString(10);
+                String tinyText = RandomString(20);
+                String text = RandomString(30);
+                String mediumText = RandomString(40);
+                DateTime date = RandomDay();
 
                 //Ejecutar metodo insertar
-                insercion.insertarMaria(nombre, edad);
+                insercion.insertarMaria(tiny, small, medium, randomFloat, randomChar, varchar, tinyText, text, mediumText, date);
                 n++;
 
             }
@@ -116,11 +169,19 @@ namespace EjemploConexion.Paginas
                 //crear un objeto tipo sql alumno
                 sql_Benchmark insercion = new sql_Benchmark();
 
-                String nombre = RandomString(10);
-                DateTime edad = RandomDay();
+                int tiny = RandomTiny();
+                int small = RandomSmall();
+                int medium = RandomMedium();
+                float randomFloat = NextFloat((float)0.00000, (float)9999.99999);
+                String randomChar = RandomString(1);
+                String varchar = RandomString(10);
+                String tinyText = RandomString(20);
+                String text = RandomString(30);
+                String mediumText = RandomString(40);
+                DateTime date = RandomDay();
 
                 //Ejecutar metodo insertar
-                insercion.insertarPedro(nombre, edad);
+                insercion.insertarPedro(tiny, small, medium, randomFloat, randomChar, varchar, tinyText, text, mediumText, date);
                 n++;
 
             }
@@ -140,11 +201,19 @@ namespace EjemploConexion.Paginas
                 //crear un objeto tipo sql alumno
                 sql_Benchmark insercion = new sql_Benchmark();
 
-                String nombre = RandomString(10);
-                DateTime edad = RandomDay();
+                int tiny = RandomTiny();
+                int small = RandomSmall();
+                int medium = RandomMedium();
+                float randomFloat = NextFloat((float)0.00000, (float)9999.99999);
+                String randomChar = RandomString(1);
+                String varchar = RandomString(10);
+                String tinyText = RandomString(20);
+                String text = RandomString(30);
+                String mediumText = RandomString(40);
+                DateTime date = RandomDay();
 
                 //Ejecutar metodo insertar
-                insercion.insertarJorge(nombre, edad);
+                insercion.insertarJorge(tiny, small, medium, randomFloat, randomChar, varchar, tinyText, text, mediumText, date);
                 n++;
 
             }
@@ -152,7 +221,7 @@ namespace EjemploConexion.Paginas
             count = 0;
             String textbox5 = TextBox5.Text;
             bool roberto_input = String.Equals(textbox5, "", StringComparison.InvariantCulture);
-            if (!christian_input)
+            if (!roberto_input)
             {
                 count = Convert.ToInt32(TextBox5.Text);
             }
@@ -164,14 +233,24 @@ namespace EjemploConexion.Paginas
                 //crear un objeto tipo sql alumno
                 sql_Benchmark insercion = new sql_Benchmark();
 
-                String nombre = RandomString(10);
-                DateTime edad = RandomDay();
+                int tiny = RandomTiny();
+                int small = RandomSmall();
+                int medium = RandomMedium();
+                float randomFloat = NextFloat((float)0.00000, (float)9999.99999);
+                String randomChar = RandomString(1);
+                String varchar = RandomString(10);
+                String tinyText = RandomString(20);
+                String text = RandomString(30);
+                String mediumText = RandomString(40);
+                DateTime date = RandomDay();
 
                 //Ejecutar metodo insertar
-                insercion.insertarRoberto(nombre, edad);
+                insercion.insertarRoberto(tiny, small, medium, randomFloat, randomChar, varchar, tinyText, text, mediumText, date);
                 n++;
 
             }
+
+
         }
 
         protected void Button2_Click(object sender, EventArgs e)

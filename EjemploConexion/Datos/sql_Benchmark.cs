@@ -54,7 +54,7 @@ namespace EjemploConexion.Datos
 
         }
 
-        public void insertarChristian(String nombre, DateTime edad)
+        public void insertarChristian(int tiny, int small, int medium, float randomFloat, String randomChar, String varchar, String tinyText, String text, String mediumText, DateTime date)
         {
             MySqlConnection conectar = ConexionB.RecibirConexion();
 
@@ -71,12 +71,20 @@ namespace EjemploConexion.Datos
 
                 //Especificar el tipo Sql
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "INSERT INTO CHRISTIAN VALUES(@a, @b, @c);";
+                comando.CommandText = "INSERT INTO CHRISTIAN VALUES(@a, @b, @c, @d, @e, @f, @g, @h, @i, @j, @k);";
 
                 //Agregar parametros
                 comando.Parameters.AddWithValue("@a", 0);
-                comando.Parameters.AddWithValue("@b", nombre);
-                comando.Parameters.AddWithValue("@c", edad);
+                comando.Parameters.AddWithValue("@b", tiny);
+                comando.Parameters.AddWithValue("@c", small);
+                comando.Parameters.AddWithValue("@d", medium);
+                comando.Parameters.AddWithValue("@e", randomFloat);
+                comando.Parameters.AddWithValue("@f", randomChar);
+                comando.Parameters.AddWithValue("@g", varchar);
+                comando.Parameters.AddWithValue("@h", tinyText);
+                comando.Parameters.AddWithValue("@i", text);
+                comando.Parameters.AddWithValue("@j", mediumText);
+                comando.Parameters.AddWithValue("@k", date);
 
                 //Ejecutar Comando SQL
 
@@ -98,7 +106,7 @@ namespace EjemploConexion.Datos
 
         }
 
-        public void insertarMaria(String nombre, DateTime edad)
+        public void insertarMaria(int tiny, int small, int medium, float randomFloat, String randomChar, String varchar, String tinyText, String text, String mediumText, DateTime date)
         {
             MySqlConnection conectar = ConexionB.RecibirConexion();
 
@@ -115,12 +123,20 @@ namespace EjemploConexion.Datos
 
                 //Especificar el tipo Sql
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "INSERT INTO MARIA VALUES(@a, @b, @c);";
+                comando.CommandText = "INSERT INTO MARIA VALUES(@a, @b, @c, @d, @e, @f, @g, @h, @i, @j, @k);";
 
                 //Agregar parametros
                 comando.Parameters.AddWithValue("@a", 0);
-                comando.Parameters.AddWithValue("@b", nombre);
-                comando.Parameters.AddWithValue("@c", edad);
+                comando.Parameters.AddWithValue("@b", tiny);
+                comando.Parameters.AddWithValue("@c", small);
+                comando.Parameters.AddWithValue("@d", medium);
+                comando.Parameters.AddWithValue("@e", randomFloat);
+                comando.Parameters.AddWithValue("@f", randomChar);
+                comando.Parameters.AddWithValue("@g", varchar);
+                comando.Parameters.AddWithValue("@h", tinyText);
+                comando.Parameters.AddWithValue("@i", text);
+                comando.Parameters.AddWithValue("@j", mediumText);
+                comando.Parameters.AddWithValue("@k", date);
 
                 //Ejecutar Comando SQL
 
@@ -142,7 +158,7 @@ namespace EjemploConexion.Datos
 
         }
 
-        public void insertarPedro(String nombre, DateTime edad)
+        public void insertarPedro(int tiny, int small, int medium, float randomFloat, String randomChar, String varchar, String tinyText, String text, String mediumText, DateTime date)
         {
             MySqlConnection conectar = ConexionB.RecibirConexion();
 
@@ -159,12 +175,20 @@ namespace EjemploConexion.Datos
 
                 //Especificar el tipo Sql
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "INSERT INTO PEDRO VALUES(@a, @b, @c);";
+                comando.CommandText = "INSERT INTO PEDRO VALUES(@a, @b, @c, @d, @e, @f, @g, @h, @i, @j, @k);";
 
                 //Agregar parametros
                 comando.Parameters.AddWithValue("@a", 0);
-                comando.Parameters.AddWithValue("@b", nombre);
-                comando.Parameters.AddWithValue("@c", edad);
+                comando.Parameters.AddWithValue("@b", tiny);
+                comando.Parameters.AddWithValue("@c", small);
+                comando.Parameters.AddWithValue("@d", medium);
+                comando.Parameters.AddWithValue("@e", randomFloat);
+                comando.Parameters.AddWithValue("@f", randomChar);
+                comando.Parameters.AddWithValue("@g", varchar);
+                comando.Parameters.AddWithValue("@h", tinyText);
+                comando.Parameters.AddWithValue("@i", text);
+                comando.Parameters.AddWithValue("@j", mediumText);
+                comando.Parameters.AddWithValue("@k", date);
 
                 //Ejecutar Comando SQL
 
@@ -186,7 +210,7 @@ namespace EjemploConexion.Datos
 
         }
 
-        public void insertarJorge(String nombre, DateTime edad)
+        public void insertarJorge(int tiny, int small, int medium, float randomFloat, String randomChar, String varchar, String tinyText, String text, String mediumText, DateTime date)
         {
             MySqlConnection conectar = ConexionB.RecibirConexion();
 
@@ -203,12 +227,20 @@ namespace EjemploConexion.Datos
 
                 //Especificar el tipo Sql
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "INSERT INTO JORGE VALUES(@a, @b, @c);";
+                comando.CommandText = "INSERT INTO JORGE VALUES(@a, @b, @c, @d, @e, @f, @g, @h, @i, @j, @k);";
 
                 //Agregar parametros
                 comando.Parameters.AddWithValue("@a", 0);
-                comando.Parameters.AddWithValue("@b", nombre);
-                comando.Parameters.AddWithValue("@c", edad);
+                comando.Parameters.AddWithValue("@b", tiny);
+                comando.Parameters.AddWithValue("@c", small);
+                comando.Parameters.AddWithValue("@d", medium);
+                comando.Parameters.AddWithValue("@e", randomFloat);
+                comando.Parameters.AddWithValue("@f", randomChar);
+                comando.Parameters.AddWithValue("@g", varchar);
+                comando.Parameters.AddWithValue("@h", tinyText);
+                comando.Parameters.AddWithValue("@i", text);
+                comando.Parameters.AddWithValue("@j", mediumText);
+                comando.Parameters.AddWithValue("@k", date);
 
                 //Ejecutar Comando SQL
 
@@ -230,7 +262,7 @@ namespace EjemploConexion.Datos
 
         }
 
-        public void insertarRoberto(String nombre, DateTime edad)
+        public void insertarRoberto(int tiny, int small, int medium, float randomFloat, String randomChar, String varchar, String tinyText, String text, String mediumText, DateTime date)
         {
             MySqlConnection conectar = ConexionB.RecibirConexion();
 
@@ -247,12 +279,20 @@ namespace EjemploConexion.Datos
 
                 //Especificar el tipo Sql
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "INSERT INTO ROBERTO VALUES(@a, @b, @c);";
+                comando.CommandText = "INSERT INTO ROBERTO VALUES(@a, @b, @c, @d, @e, @f, @g, @h, @i, @j, @k);";
 
                 //Agregar parametros
                 comando.Parameters.AddWithValue("@a", 0);
-                comando.Parameters.AddWithValue("@b", nombre);
-                comando.Parameters.AddWithValue("@c", edad);
+                comando.Parameters.AddWithValue("@b", tiny);
+                comando.Parameters.AddWithValue("@c", small);
+                comando.Parameters.AddWithValue("@d", medium);
+                comando.Parameters.AddWithValue("@e", randomFloat);
+                comando.Parameters.AddWithValue("@f", randomChar);
+                comando.Parameters.AddWithValue("@g", varchar);
+                comando.Parameters.AddWithValue("@h", tinyText);
+                comando.Parameters.AddWithValue("@i", text);
+                comando.Parameters.AddWithValue("@j", mediumText);
+                comando.Parameters.AddWithValue("@k", date);
 
                 //Ejecutar Comando SQL
 
