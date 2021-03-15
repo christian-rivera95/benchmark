@@ -94,7 +94,7 @@
             <hr />
             <br />
             <asp:Button ID="Button1" runat="server" Text="Rellenar" style="margin-right:25px;" OnClick="Button1_Click"/>
-            <asp:Button ID="Button2" runat="server" Text="Limpiar" />
+            <asp:Button ID="Button2" runat="server" Text="Limpiar" OnClick="Button2_Click" />
             <br />
         </div>
     </form>

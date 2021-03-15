@@ -172,7 +172,61 @@ namespace EjemploConexion.Paginas
                 n++;
 
             }
-            Response.Redirect("/Paginas/benchmark.aspx", true);
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Boolean christian = CheckBox6.Checked;
+            Boolean maria = CheckBox7.Checked;
+            Boolean pedro = CheckBox8.Checked;
+            Boolean jorge = CheckBox9.Checked;
+            Boolean roberto = CheckBox10.Checked;
+
+            if (christian)
+            {
+                //crear un objeto tipo sql alumno
+                sql_Benchmark insercion = new sql_Benchmark();
+
+                //Ejecutar metodo insertar
+                insercion.deleteChristian();
+            }
+
+            if (maria)
+            {
+                //crear un objeto tipo sql alumno
+                sql_Benchmark insercion = new sql_Benchmark();
+
+                //Ejecutar metodo insertar
+                insercion.deleteMaria();
+            }
+
+            if (pedro)
+            {
+                //crear un objeto tipo sql alumno
+                sql_Benchmark insercion = new sql_Benchmark();
+
+                //Ejecutar metodo insertar
+                insercion.deletePedro();
+            }
+
+            if (jorge)
+            {
+                //crear un objeto tipo sql alumno
+                sql_Benchmark insercion = new sql_Benchmark();
+
+                //Ejecutar metodo insertar
+                insercion.deleteJorge();
+            }
+
+            if (roberto)
+            {
+                //crear un objeto tipo sql alumno
+                sql_Benchmark insercion = new sql_Benchmark();
+
+                //Ejecutar metodo insertar
+                insercion.deleteRoberto();
+            }
+
         }
     }
 }

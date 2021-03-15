@@ -273,5 +273,205 @@ namespace EjemploConexion.Datos
             }
 
         }
+
+        public void deleteChristian()
+        {
+            MySqlConnection conectar = ConexionB.RecibirConexion();
+
+            try
+            {
+                //Abrir Conexion
+                conectar.Open();
+
+                //Crear Objeto de tipo MySqlCommand
+                MySqlCommand comando = new MySqlCommand();
+
+                //Cadena de Conexion
+                comando.Connection = conectar;
+
+                //Especificar el tipo Sql
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "TRUNCATE CHRISTIAN;";
+
+
+                //Ejecutar Comando SQL
+
+                try
+                {
+                    comando.ExecuteNonQuery();
+                    conectar.Close();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+
+        }
+
+        public void deleteMaria()
+        {
+            MySqlConnection conectar = ConexionB.RecibirConexion();
+
+            try
+            {
+                //Abrir Conexion
+                conectar.Open();
+
+                //Crear Objeto de tipo MySqlCommand
+                MySqlCommand comando = new MySqlCommand();
+
+                //Cadena de Conexion
+                comando.Connection = conectar;
+
+                //Especificar el tipo Sql
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "TRUNCATE MARIA;";
+
+
+                //Ejecutar Comando SQL
+
+                try
+                {
+                    comando.ExecuteNonQuery();
+                    conectar.Close();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+
+        }
+
+        public void deletePedro()
+        {
+            MySqlConnection conectar = ConexionB.RecibirConexion();
+
+            try
+            {
+                //Abrir Conexion
+                conectar.Open();
+
+                //Crear Objeto de tipo MySqlCommand
+                MySqlCommand comando = new MySqlCommand();
+
+                //Cadena de Conexion
+                comando.Connection = conectar;
+
+                //Especificar el tipo Sql
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "TRUNCATE PEDRO;";
+
+
+                //Ejecutar Comando SQL
+
+                try
+                {
+                    comando.ExecuteNonQuery();
+                    conectar.Close();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+
+        }
+
+        public void deleteJorge()
+        {
+            MySqlConnection conectar = ConexionB.RecibirConexion();
+
+            try
+            {
+                //Abrir Conexion
+                conectar.Open();
+
+                //Crear Objeto de tipo MySqlCommand
+                MySqlCommand comando = new MySqlCommand();
+
+                //Cadena de Conexion
+                comando.Connection = conectar;
+
+                //Especificar el tipo Sql
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "TRUNCATE JORGE;";
+
+
+                //Ejecutar Comando SQL
+
+                try
+                {
+                    comando.ExecuteNonQuery();
+                    conectar.Close();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+
+        }
+
+        public void deleteRoberto()
+        {
+            MySqlConnection conectar = ConexionB.RecibirConexion();
+
+            try
+            {
+                //Abrir Conexion
+                conectar.Open();
+
+                //Crear Objeto de tipo MySqlCommand
+                MySqlCommand comando = new MySqlCommand();
+
+                //Cadena de Conexion
+                comando.Connection = conectar;
+
+                //Especificar el tipo Sql
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "TRUNCATE ROBERTO;";
+
+
+                //Ejecutar Comando SQL
+
+                try
+                {
+                    comando.ExecuteNonQuery();
+                    conectar.Close();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+
+        }
     }
 }
