@@ -72,14 +72,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Paginas\benchmark.aspx" />
     <Content Include="Paginas\CRUD_Alumno.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\Conexion.cs" />
+    <Compile Include="Datos\ConexionB.cs" />
     <Compile Include="Datos\sql_Alumno.cs" />
+    <Compile Include="Datos\sql_Benchmark.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\benchmark.aspx.cs">
+      <DependentUpon>benchmark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paginas\benchmark.aspx.designer.cs">
+      <DependentUpon>benchmark.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paginas\CRUD_Alumno.aspx.cs">
       <DependentUpon>CRUD_Alumno.aspx</DependentUpon>
