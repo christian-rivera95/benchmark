@@ -21,7 +21,7 @@ namespace EjemploConexion.Paginas
         // Generates a random string within a range.      
         public static string RandomString(int length)
         {
-            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            const string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             return new string(Enumerable.Repeat(chars, length)
               .Select(s => s[random.Next(s.Length)]).ToArray());
         }
@@ -48,28 +48,129 @@ namespace EjemploConexion.Paginas
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            uint count = 0;
+            int count = 0;
             String textbox1 = TextBox1.Text;
-            bool equal = String.Equals(textbox1,"", StringComparison.InvariantCulture);
-            if(!equal)
+            bool christian_input = String.Equals(textbox1,"", StringComparison.InvariantCulture);
+            if(!christian_input)
             {
-                count = Convert.ToUInt32(TextBox1.Text);
+                count = Convert.ToInt32(TextBox1.Text);
             }
+            Boolean christian = CheckBox1.Checked;
+            Boolean maria = CheckBox2.Checked;
+            Boolean pedro = CheckBox3.Checked;
+            Boolean jorge = CheckBox4.Checked;
+            Boolean roberto = CheckBox5.Checked;
 
             int n = 0;
-            while (n < count)
+            while (n < count && christian)
             {
-                //Obtener los datos
-                //String nombre = Convert.ToString(TextBox1.Text);
-                String nombre = RandomString(10);
-                DateTime edad = RandomDay();
 
                 //crear un objeto tipo sql alumno
                 sql_Benchmark insercion = new sql_Benchmark();
 
+                    String nombre = RandomString(10);
+                    DateTime edad = RandomDay();
+
+                    //Ejecutar metodo insertar
+                    insercion.insertarChristian(nombre, edad);
+                    n++;
+
+            }
+
+            count = 0;
+            String textbox2 = TextBox2.Text;
+            bool maria_input = String.Equals(textbox2, "", StringComparison.InvariantCulture);
+            if (!maria_input)
+            {
+                count = Convert.ToInt32(TextBox2.Text);
+            }
+
+            n = 0;
+            while (n < count && maria)
+            {
+
+                //crear un objeto tipo sql alumno
+                sql_Benchmark insercion = new sql_Benchmark();
+
+                String nombre = RandomString(10);
+                DateTime edad = RandomDay();
+
                 //Ejecutar metodo insertar
-                insercion.insertarRegistros(nombre, edad);
+                insercion.insertarMaria(nombre, edad);
                 n++;
+
+            }
+
+            count = 0;
+            String textbox3 = TextBox3.Text;
+            bool pedro_input = String.Equals(textbox3, "", StringComparison.InvariantCulture);
+            if (!pedro_input)
+            {
+                count = Convert.ToInt32(TextBox3.Text);
+            }
+
+            n = 0;
+            while (n < count && pedro)
+            {
+
+                //crear un objeto tipo sql alumno
+                sql_Benchmark insercion = new sql_Benchmark();
+
+                String nombre = RandomString(10);
+                DateTime edad = RandomDay();
+
+                //Ejecutar metodo insertar
+                insercion.insertarPedro(nombre, edad);
+                n++;
+
+            }
+
+            count = 0;
+            String textbox4 = TextBox4.Text;
+            bool jorge_input = String.Equals(textbox4, "", StringComparison.InvariantCulture);
+            if (!jorge_input)
+            {
+                count = Convert.ToInt32(TextBox4.Text);
+            }
+
+            n = 0;
+            while (n < count && jorge)
+            {
+
+                //crear un objeto tipo sql alumno
+                sql_Benchmark insercion = new sql_Benchmark();
+
+                String nombre = RandomString(10);
+                DateTime edad = RandomDay();
+
+                //Ejecutar metodo insertar
+                insercion.insertarJorge(nombre, edad);
+                n++;
+
+            }
+
+            count = 0;
+            String textbox5 = TextBox5.Text;
+            bool roberto_input = String.Equals(textbox5, "", StringComparison.InvariantCulture);
+            if (!christian_input)
+            {
+                count = Convert.ToInt32(TextBox5.Text);
+            }
+
+            n = 0;
+            while (n < count && roberto)
+            {
+
+                //crear un objeto tipo sql alumno
+                sql_Benchmark insercion = new sql_Benchmark();
+
+                String nombre = RandomString(10);
+                DateTime edad = RandomDay();
+
+                //Ejecutar metodo insertar
+                insercion.insertarRoberto(nombre, edad);
+                n++;
+
             }
             Response.Redirect("/Paginas/benchmark.aspx", true);
         }
